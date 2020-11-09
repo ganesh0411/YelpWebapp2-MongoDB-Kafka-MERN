@@ -58,18 +58,17 @@ describe('Yelp Test Cases:', () => {
             done();
         })
     })
-
     it("Case : Get owner profile", (done) => {
         chai.request('http://localhost:3001')
         .post('/GetOwnerProfile')
         .set('Accept', 'application/json')
         .send({
-            "email" : "cheesecakefactory@gmail.com"
+            "email" : "test@gmail.com"
         })
         .then((res) => {
             expect(res.status).to.equal(200);
             done();
         })
-    })
+
 
 })
