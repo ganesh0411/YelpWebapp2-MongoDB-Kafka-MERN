@@ -17,6 +17,19 @@ describe('Yelp Test Cases:', () => {
         })
     })
 
+    it("Case : Get All Owner Orders", (done) => {
+        chai.request('http://localhost:3001')
+        .post('/getOwnerOrders')
+        .set('Accept', 'application/json')
+        .send({
+            "username" : "cheesecakefactory@gmail.com",
+            "password" : "123456"
+        })
+        .then((res) => {
+            expect(res.status).to.equal(200);
+            done();
+        })
+    })
 
     it("Case : User login check", (done) => {
         chai.request('http://localhost:3001')
@@ -32,19 +45,6 @@ describe('Yelp Test Cases:', () => {
         })
     })
 
-    it("Case : Owner login check", (done) => {
-        chai.request('http://localhost:3001')
-        .post('/loginOwner')
-        .set('Accept', 'application/json')
-        .send({
-            "username" : "cheesecakefactory@gmail.com",
-            "password" : "123456"
-        })
-        .then((res) => {
-            expect(res.status).to.equal(200);
-            done();
-        })
-    })
 
     it("Case : Get Restaurant Menu for owner", (done) => {
         chai.request('http://localhost:3001')
@@ -58,7 +58,7 @@ describe('Yelp Test Cases:', () => {
             done();
         })
     })
-    it("Case : Get owner profile", (done) => {
+    it("Case : Get Restaurant profile", (done) => {
         chai.request('http://localhost:3001')
         .post('/GetOwnerProfile')
         .set('Accept', 'application/json')

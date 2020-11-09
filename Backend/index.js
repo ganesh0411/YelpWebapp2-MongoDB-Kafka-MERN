@@ -1,6 +1,6 @@
 const port = process.env.PORT || 3001;
-const rooturl = "http://localhost:3000";
-//const rooturl = "put AWS link here";
+//const rooturl = "http://localhost:3000";
+const rooturl = "http://54.183.152.239:3000";
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
