@@ -5,12 +5,12 @@ chai.use(chaiHttp);
 var assert = require('chai').assert;
 var expect = chai.expect;
 
-describe('Grubhub Test Cases:', () => {
+describe('Yelp Test Cases:', () => {
     it("Case : Get Restaurants on search", (done) => {
         chai.request('http://localhost:3001')
         .post('/UserDashboard')
         .set('Accept', 'application/json')
-        .send({"itemname" : "pizza"})
+        .send({"itemname" : "Caesar Salad"})
         .then((res) => {
             expect(res.status).to.equal(200);
             done();
@@ -23,8 +23,8 @@ describe('Grubhub Test Cases:', () => {
         .post('/loginUser')
         .set('Accept', 'application/json')
         .send({
-            "username" : "marktaylor@gmail.com",
-            "password" : "password"
+            "username" : "darthvader@gmail.com",
+            "password" : "123456"
         })
         .then((res) => {
             expect(res.status).to.equal(200);
@@ -37,8 +37,8 @@ describe('Grubhub Test Cases:', () => {
         .post('/loginOwner')
         .set('Accept', 'application/json')
         .send({
-            "username" : "ssrane@live.com",
-            "password" : "password"
+            "username" : "cheesecakefactory@gmail.com",
+            "password" : "123456"
         })
         .then((res) => {
             expect(res.status).to.equal(200);
@@ -51,7 +51,7 @@ describe('Grubhub Test Cases:', () => {
         .post('/GetMenu')
         .set('Accept', 'application/json')
         .send({
-            "restname" : "Indian Pizzeria"
+            "restname" : "The Cheesecake Factory"
         })
         .then((res) => {
             expect(res.status).to.equal(200);
@@ -64,7 +64,7 @@ describe('Grubhub Test Cases:', () => {
         .post('/GetOwnerProfile')
         .set('Accept', 'application/json')
         .send({
-            "email" : "ssrane@live.com"
+            "email" : "cheesecakefactory@gmail.com"
         })
         .then((res) => {
             expect(res.status).to.equal(200);
