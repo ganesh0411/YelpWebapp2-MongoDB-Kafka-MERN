@@ -1,0 +1,11 @@
+.masthead {
+  /* height: 580px;
+  min-height: 580px; */
+  top: 50px;
+  height: 85vh;
+  min-height: 90px;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
