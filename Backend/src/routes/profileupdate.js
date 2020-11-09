@@ -23,7 +23,9 @@ router.route('/OwnerProfile').post(passport.authenticate('jwt', { session: false
         "email": req.body.email,
         "mob": req.body.mob,
         "restzip": req.body.restzip,
-        "cuisine": req.body.cuisine
+        "cuisine": req.body.cuisine,
+        "description": req.body.description,
+        "timings": req.body.timings
     }
 
     if(req.file){

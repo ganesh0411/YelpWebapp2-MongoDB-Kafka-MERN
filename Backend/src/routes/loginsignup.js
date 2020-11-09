@@ -57,7 +57,9 @@ router.route('/SignUpOwner').post(function(req, res){
         "mob": req.body.mob,
         "restname": req.body.restname,
         "restzip": req.body.restzip,
-        "cuisine": req.body.cuisine
+        "cuisine": req.body.cuisine,
+        "description" : req.body.description,
+        "timings" : req.body.timings
     }
 
     var msg = {

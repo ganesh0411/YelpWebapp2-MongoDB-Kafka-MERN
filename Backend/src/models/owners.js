@@ -25,7 +25,15 @@ Owners = new Schema({
         type: String,
         required : true
     },
+    description: {
+        type: String,
+        required : true
+    },
     cuisine: {
+        type: String,
+        required : true
+    },
+    timings: {
         type: String,
         required : true
     },
