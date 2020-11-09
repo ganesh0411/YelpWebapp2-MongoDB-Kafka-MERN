@@ -1,2 +1,4 @@
 .DS_Store
 Frontend/node_modules/*
+Backend/node_modules/*
+Kafka-Backend/node_modules/*
